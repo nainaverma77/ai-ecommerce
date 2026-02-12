@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="nav-left">
+    <div class="logo-wrap">
+      <img src="assets/images/logo1.png" alt="AiShopper Logo" class="logo">
+    </div>
+    <span class="brand">AiShopper</span>
+  </div>
+
+  <div class="nav-center"></div>
+
+  <div class="nav-right">
+    <button class="nav-icon" id="backBtn">←</button>
+  </div>
+</nav>
+
+<!-- ================= LAYOUT ================= -->
+<div class="layout">
+  <main style="width:100%">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Your Cart</h1>
+        <p>Review items before checkout.</p>
+      </div>
+    </section>
+
+    <!-- CART ITEMS -->
+    <section>
+      <div class="grid" id="cartItems"></div>
+
+      <div
+        id="cartFooter"
+        style="margin-top:24px; display:flex; justify-content:space-between; align-items:center;"
+      >
+        <h3 id="totalPrice"></h3>
+        <button class="primary" id="checkoutBtn">Checkout</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- MODULE SCRIPTS -->
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/cart.js"></script>
+
+</body>
+</html>

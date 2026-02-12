@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AiShopper</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+
+  <div class="nav-left">
+    <div class="logo-wrap">
+      <img src="assets/images/logo1.png" alt="AiShopper Logo" class="logo">
+    </div>
+    <span class="brand">AiShopper</span>
+  </div>
+
+  <div class="nav-center"></div>
+
+  <div class="nav-right">
+
+    <button class="nav-icon" data-action="wishlist">
+      ❤️
+      <span class="badge" id="wishlistCount">0</span>
+    </button>
+
+    <button class="nav-icon" data-action="cart">
+      🛒
+      <span class="badge" id="cartCount">0</span>
+    </button>
+
+    <div class="account">
+      <button class="nav-icon" id="accountBtn">👤</button>
+      <div class="dropdown" id="accountMenu">
+        <a href="#">Login / Logout</a>
+        <a href="#">My Address</a>
+        <a href="#">Orders</a>
+        <a href="#">Warranty</a>
+        <a href="#">Customer Support</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ================= LAYOUT ================= -->
+<div class="layout">
+
+  <!-- FILTER PANEL -->
+  <aside class="panel">
+    <h3>Filters</h3>
+
+    <label>Category</label>
+    <select id="categoryFilter"></select>
+
+    <label>Sort by</label>
+    <select id="sortFilter">
+      <option value="ai">AI Recommended</option>
+      <option value="price-low">Price: Low → High</option>
+      <option value="price-high">Price: High → Low</option>
+    </select>
+
+    <label>Max price</label>
+    <input type="range" id="priceFilter">
+    <span id="priceValue"></span>
+
+    <div class="panel-box">
+      <strong>AI Mode</strong>
+      <p>Recommendations based on behavior and similarity.</p>
+    </div>
+
+    <!-- ✅ OPTION 2: ACTIVE FILTER SUMMARY -->
+    <div class="panel-summary">
+      <strong>Active filters</strong>
+      <p id="activeFiltersText">Showing all products</p>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <section class="hero">
+      <div>
+        <h1>Smart Shopping with AI</h1>
+        <p>Personalized product discovery made simple.</p>
+
+        <div class="hero-actions">
+          <button class="primary" id="exploreBtn">Explore products</button>
+          <button class="ghost" id="refreshAiBtn">Refresh AI picks</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong id="totalProducts">0</strong>
+          <span>Products</span>
+        </div>
+        <div class="stat">
+          <strong id="totalCategories">0</strong>
+          <span>Categories</span>
+        </div>
+        <div class="stat">
+          <strong>AI</strong>
+          <span>Powered</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT MODAL -->
+    <div class="product-modal" id="productModal">
+      <div class="product-modal-content">
+
+        <button class="modal-close" id="closeModal">✕</button>
+
+        <div class="modal-image">
+          <img id="modalImage" alt="">
+        </div>
+
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+          <p class="modal-price" id="modalPrice"></p>
+
+          <div class="modal-actions">
+            <button class="ghost" id="modalCloseBtn">Close</button>
+            <button class="primary" id="modalCartBtn">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <section>
+      <h2>Recommended for you</h2>
+      <div class="grid" id="recommended"></div>
+    </section>
+
+    <section id="allProducts">
+      <h2>All products</h2>
+      <div class="grid" id="products"></div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <img src="assets/images/logo1.png" alt="AiShopper Logo">
+      <p>Smart shopping powered by AI recommendations.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Shop</h4>
+      <a href="#">All Products</a>
+      <a href="#">Wishlist</a>
+      <a href="#">Cart</a>
+      <a href="#">Offers</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="#">Customer Support</a>
+      <a href="#">Warranty</a>
+      <a href="#">Returns</a>
+      <a href="#">FAQs</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 AiShopper. All rights reserved. Frontend made by "Naina Verma"
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/products.js"></script>
+
+</body>
+</html>
