@@ -112,4 +112,3 @@ function updateBadges() {
 
 window.updateBadges = updateBadges;
 window.addEventListener("storage", updateBadges);
-    
