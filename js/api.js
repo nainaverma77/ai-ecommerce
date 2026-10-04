@@ -3,7 +3,7 @@
    Auth-aware, with token refresh
 ========================= */
 
-const API_BASE = 'http://localhost:5001/api';
+const API_BASE = '/api';
 const PRODUCTS_API = 'https://dummyjson.com/products?limit=100';
 
 /* =========================

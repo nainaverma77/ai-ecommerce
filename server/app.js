@@ -99,14 +99,16 @@ app.use(require('./middleware/errorHandler'));
 /* =========================
    START SERVER
 ========================= */
-app.listen(PORT, () => {
-  console.log(`
-  ╔═══════════════════════════════════════╗
-  ║   🛍️  AiShopper Server Running       ║
-  ║   📡  Port: ${PORT}                     ║
-  ║   🌐  http://localhost:${PORT}           ║
-  ╚═══════════════════════════════════════╝
-  `);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`
+    ╔═══════════════════════════════════════╗
+    ║   🛍️  AiShopper Server Running       ║
+    ║   📡  Port: ${PORT}                     ║
+    ║   🌐  http://localhost:${PORT}           ║
+    ╚═══════════════════════════════════════╝
+    `);
+  });
+}
 
 module.exports = app;
